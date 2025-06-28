@@ -150,7 +150,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const formData = new FormData(this);
     
     // Send the form data
-    fetch('https://formspree.io/f/xpwrwkba', {
+    fetch('https://formspree.io/f/xjkrjlog', {
         method: 'POST',
         body: formData,
         headers: {
