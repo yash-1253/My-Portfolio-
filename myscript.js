@@ -1,140 +1,3 @@
-// Profile image modal functionality
-const profileImg = document.querySelector('.profile-img');
-const modal = document.createElement('div');
-modal.className = 'profile-modal';
-modal.innerHTML = `
-    <div class="modal-content">
-        <img src="" alt="Profile Image" class="modal-img">
-        <span class="close-modal">&times;</span>
-    </div>
-`;
-document.body.appendChild(modal);
-
-profileImg.addEventListener('click', () => {
-    const modalImg = modal.querySelector('.modal-img');
-    modalImg.src = profileImg.src;
-    modal.style.display = 'flex';
-    document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
-});
-
-const closeModal = modal.querySelector('.close-modal');
-closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-    document.body.style.overflow = "auto"; // Re-enable scrolling
-});
-
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = "auto";
-    }
-});
-
-// Add this CSS for the modal
-const modalStyle = document.createElement('style');
-modalStyle.textContent = `
-    .profile-modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        z-index: 1000;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .modal-content {
-        position: relative;
-        max-width: 80%;
-        max-height: 80vh;
-        text-align: center;
-    }
-    
-    .modal-img {
-        max-width: 100%;
-        max-height: 80vh;
-        border-radius: 50%;
-        border: 5px solid var(--primary-color);
-        animation: zoomIn 0.3s ease-out;
-    }
-    
-    .close-modal {
-        position: absolute;
-        top: -40px;
-        right: -40px;
-        color: white;
-        font-size: 40px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-    
-    .close-modal:hover {
-        color: var(--primary-color);
-    }
-    
-    @keyframes zoomIn {
-        from { transform: scale(0.5); opacity: 0; }
-        to { transform: scale(1); opacity: 1; }
-    }
-    
-    @media (max-width: 768px) {
-        .modal-img {
-            width: 90vw;
-            height: 90vw;
-        }
-        
-        .close-modal {
-            top: -30px;
-            right: 0;
-            font-size: 30px;
-        }
-    }
-`;
-document.head.appendChild(modalStyle);
-
-// Image Modal Functionality
-const imageModal = document.getElementById('imageModal');
-const modalImage = document.getElementById('modalImage');
-const profileImage = document.getElementById('profileImg');
-const closeImageModal = document.querySelector('.close-modal');
-
-// Function to open modal
-function openModal() {
-    imageModal.style.display = "flex";
-    modalImage.src = profileImage.src;
-    document.body.style.overflow = "hidden";
-}
-
-// Function to close modal
-function closeModal() {
-    imageModal.style.display = "none";
-    document.body.style.overflow = "auto";
-}
-
-// Open modal when clicking on profile image
-profileImage.addEventListener('click', openModal);
-
-// Close modal when clicking the close button
-closeImageModal.addEventListener('click', closeModal);
-
-// Close modal when clicking outside the image
-imageModal.addEventListener('click', function(event) {
-    if (event.target === imageModal) {
-        closeModal();
-    }
-});
-
-// Close modal with Escape key
-document.addEventListener('keydown', function(event) {
-    if (event.key === "Escape" && imageModal.style.display === "flex") {
-        closeModal();
-    }
-});
-
 // Form Submission Handler
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -188,25 +51,25 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 document.addEventListener('DOMContentLoaded', function() {
     const profileImg = document.querySelector('.profile-img');
     const profileModal = document.getElementById('profileModal');
-    const closeModal = document.querySelector('.close-modal');
-    const modalImg = document.querySelector('.modal-img');
-
-    console.log('Profile Image:', profileImg);
-    console.log('Profile Modal:', profileModal);
-    console.log('Close Modal:', closeModal);
-    console.log('Modal Image:', modalImg);
+    const closeModal = profileModal.querySelector('.close-modal');
+    const modalImg = profileModal.querySelector('.modal-img');
 
     if (profileImg && profileModal && closeModal && modalImg) {
-        // Open modal when clicking on profile image
-        profileImg.addEventListener('click', function() {
-            console.log('Profile image clicked');
-            profileModal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        });
+        // REMOVE the click event on profile image
+        // profileImg.addEventListener('click', function() {
+        //     modalImg.src = profileImg.src || './My_Image.jpeg';
+        //     modalImg.style.display = 'block';
+        //     profileModal.style.display = 'flex';
+        //     document.body.style.overflow = 'hidden';
+        // });
+
+        // Add error handler for broken image
+        modalImg.onerror = function() {
+            modalImg.src = './My_Image.jpeg';
+        };
 
         // Close modal when clicking the close button
         closeModal.addEventListener('click', function() {
-            console.log('Close button clicked');
             profileModal.style.display = 'none';
             document.body.style.overflow = 'auto';
         });
@@ -214,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close modal when clicking outside the image
         profileModal.addEventListener('click', function(e) {
             if (e.target === profileModal) {
-                console.log('Modal background clicked');
                 profileModal.style.display = 'none';
                 document.body.style.overflow = 'auto';
             }
@@ -223,17 +85,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close modal with Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && profileModal.style.display === 'flex') {
-                console.log('Escape key pressed');
                 profileModal.style.display = 'none';
                 document.body.style.overflow = 'auto';
             }
-        });
-    } else {
-        console.error('Some elements are missing:', {
-            profileImg: !!profileImg,
-            profileModal: !!profileModal,
-            closeModal: !!closeModal,
-            modalImg: !!modalImg
         });
     }
 });

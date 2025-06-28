@@ -38,14 +38,6 @@
         <img class="modal-content" id="modalImage">
     </div>
 
-    <!-- Profile Photo Modal -->
-    <div class="profile-modal" id="profileModal">
-        <div class="modal-content">
-            <img src="My_Image.jpeg" alt="Yash Vora" class="modal-img">
-        </div>
-        <span class="close-modal">&times;</span>
-    </div>
-
     <div class="container">
         <header id="home">
             <div class="profile-img-container">
@@ -80,27 +72,76 @@
             <p>BAPS Swaminarayan Vidyamandir, Gondal (2019-2020)</p>
         </div>
 
+    
         <div class="section" id="skills">
-            <h2>Skills</h2>
+          <h2>Skills</h2>
+          <div class="skills-group">
+            <h4>Programming Languages</h4>
             <div class="skills">
-                <span class="skill">C</span>
-                <span class="skill">HTML</span>
-                <span class="skill">CSS</span>
-                <span class="skill">Java</span>
-                <span class="skill">Python</span>
-                <span class="skill">MySQL</span>
-                <span class="skill">OOP</span>
-               
+              <span class="skill">JavaScript</span>
+              <span class="skill">Python</span>
+              <span class="skill">C++</span>
+              <span class="skill">Java</span>
+              <span class="skill">C</span>
             </div>
+          </div>
+          <div class="skills-group">
+            <h4>Web Development</h4>
+            <div class="skills">
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+            </div>
+          </div>
+          <div class="skills-group">
+            <h4>Database Management</h4>
+            <div class="skills">
+              <span class="skill">MySQL</span>
+              <span class="skill">PostgreSQL</span>
+            </div>
+          </div>
+          <div class="skills-group">
+            <h4>Tools & Platforms</h4>
+            <div class="skills">
+              <span class="skill">Git</span>
+              <span class="skill">GitHub</span>
+            </div>
+          </div>
+          <div class="skills-group">
+            <h4>Soft Skills</h4>
+            <div class="skills">
+              <span class="skill">Quick learner</span>
+              <span class="skill">Time management</span>
+              <span class="skill">Communication</span>
+            </div>
+          </div>
+          <div class="skills-group">
+            <h4>Additional Skills</h4>
+            <div class="skills">
+              <span class="skill">Marketing</span>
+              <span class="skill">Basic stock market</span>
+            </div>
+          </div>
         </div>
 
         <div class="section" id="projects">
             <h2>Projects</h2>
-            <ul>
-                <li><strong>Portfolio Website</strong> - A responsive personal website showcasing skills and projects (HTML, CSS, JavaScript)</li>
-                <li><strong>E-Commerce website (lakshiagrichem.com) </strong>- Lakshi Agrichem's website facilitates seamless buying and selling of agricultural products using React and Node.js, serving farmers andagricultural professionals with a user-friendly interface.</li>
-                <li><strong>Attendance Management System</strong>Attendance Management System is a web-based application designed to efficiently manage and track student attendance records for educationalinstitutions. Built using Django, HTML, CSS, JavaScript, and MySQL, the system offers role-based access for administrators, teachers, and students,allowing seamless attendance management, report generation, and data security.</li>
-            </ul>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive personal website showcasing skills and projects.</p>
+                    <div class="project-tech">HTML, CSS, JavaScript</div>
+                </div>
+                <div class="project-item">
+                    <h3>E-Commerce Website (lakshiagrichem.com)</h3>
+                    <p>Lakshi Agrichem's website facilitates seamless buying and selling of agricultural products using React and Node.js, serving farmers and agricultural professionals with a user-friendly interface.</p>
+                    <div class="project-tech">React, Node.js</div>
+                </div>
+                <div class="project-item">
+                    <h3>Attendance Management System</h3>
+                    <p>A web-based application designed to efficiently manage and track student attendance records for educational institutions. Built using Django, HTML, CSS, JavaScript, and MySQL, the system offers role-based access for administrators, teachers, and students, allowing seamless attendance management, report generation, and data security.</p>
+                    <div class="project-tech">Django, HTML, CSS, JavaScript, MySQL</div>
+                </div>
+            </div>
         </div>
 
         <div class="section" id="contact-form">
@@ -124,7 +165,7 @@
             <div class="contact-items">
                 <div class="contact-item">
                     <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                    <a href="mailto:yashpatel4066@gmail.com">yashpatel4066@gmail.com</a>
+                    <a href="mailto:yashpatel4066@gmail.com">yashpatel4066@gmail.com </a>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon"><i class="fas fa-phone"></i></div>
@@ -144,6 +185,15 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Profile Photo Modal (moved to end of body for best practice) -->
+    <!-- Only one modal, with correct classes and IDs -->
+    <div class="profile-modal" id="profileModal">
+        <div class="modal-content">
+            <img src="My_Image.jpeg" alt="Yash Vora" class="modal-img">
+        </div>
+        <span class="close-modal">&times;</span>
     </div>
 
     <script src="myscript.js"></script>
