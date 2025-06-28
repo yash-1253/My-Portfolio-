@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Vora | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Progress bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">Yash Vora</div>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back to top button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Profile Photo Modal -->
+    <div class="profile-modal" id="profileModal">
+        <div class="modal-content">
+            <img src="My_Image.jpeg" alt="Yash Vora" class="modal-img">
+        </div>
+        <span class="close-modal">&times;</span>
+    </div>
+
+    <div class="container">
+        <header id="home">
+            <div class="profile-img-container">
+                <img src="My_Image.jpeg" alt="Yash Vora" class="profile-img">
+            </div>
+            <h1>Yash Vora</h1>
+            <p class="tagline"> | Software Developer | </p>
+            <div class="social-links">
+                <a href="https://github.com/yash-1253" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yash18/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/__yash._.1253/?next=%2F" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </header>
+
+        <div class="section" id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Yash Vora,Aspiring Full-Stack Web Developer with hands-on experience in the MERN stack. Skilled in building responsive front-end interfacesand robust back-end systems. Passionate about creating efficient web solutions and contributing to impactful, real-world projects in a collaborative environment.</p>
+            <a href="Yash final resume.pdf" download class="resume-btn" id="resumeBtn">
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+        </div>
+
+        <div class="section" id="education">
+            <h2>Education</h2>
+            <p><strong>B. Tech in Computer Engineering & Engineering (CVM)</strong></p>
+            <p>G H Patel College of Engineering and Technology (2022-2026)</p>
+            
+            <p><strong>12th Science (GSEB)</strong></p>
+            <p>BAPS Swaminarayan Vidyamandir, Gondal (2021-2022)</p>
+
+            <p><strong>10th (GSEB)</strong></p>
+            <p>BAPS Swaminarayan Vidyamandir, Gondal (2019-2020)</p>
+        </div>
+
+        <div class="section" id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill">C</span>
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">Java</span>
+                <span class="skill">Python</span>
+                <span class="skill">MySQL</span>
+                <span class="skill">OOP</span>
+               
+            </div>
+        </div>
+
+        <div class="section" id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Portfolio Website</strong> - A responsive personal website showcasing skills and projects (HTML, CSS, JavaScript)</li>
+                <li><strong>E-Commerce website (lakshiagrichem.com) </strong>- Lakshi Agrichem's website facilitates seamless buying and selling of agricultural products using React and Node.js, serving farmers andagricultural professionals with a user-friendly interface.</li>
+                <li><strong>Attendance Management System</strong>Attendance Management System is a web-based application designed to efficiently manage and track student attendance records for educationalinstitutions. Built using Django, HTML, CSS, JavaScript, and MySQL, the system offers role-based access for administrators, teachers, and students,allowing seamless attendance management, report generation, and data security.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="contact-form">
+            <h2>Contact With Me</h2>
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xpwrwkba" method="POST">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>Connect With Me</h2>
+            <div class="contact-items">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <a href="mailto:yashpatel4066@gmail.com">yashpatel4066@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <a href="tel:+918155840466">+91 8155840466</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <a href="https://github.com/yash-1253" target="_blank">GitHub Profile</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                    <a href="https://www.linkedin.com/in/yash18/" target="_blank">LinkedIn Profile</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                    <a href="https://www.instagram.com/__yash._.1253/?next=%2F" target="_blank">Instagram Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="myscript.js"></script>
+</body>
+</html>
